@@ -7,6 +7,7 @@ import {
 import fastifyCors from "@fastify/cors";
 import { createUserRoute } from "../routes/create-user";
 import { authenticateUserRoute } from "../routes/authenticate-user";
+import { editUserRoute } from "../routes/edit-user";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -22,6 +23,7 @@ app.get("/", async () => {
 
 app.register(createUserRoute);
 app.register(authenticateUserRoute);
+app.register(editUserRoute);
 
 app
   .listen({

@@ -23,7 +23,6 @@ export async function authenticateUser({
   if (!user) {
     throw new Error("Invalid credentials");
   }
-  console.log(user);
 
   return {
     user,
