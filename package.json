@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "keywords": [],
+  "workspaces": [
+    "apps/**",
+    "server/**"
+  ],
   "author": "",
   "license": "ISC"
 }
