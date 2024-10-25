@@ -19,7 +19,13 @@ export async function createUser({ email, name, password }: CreateUserRequest) {
 
   const user = result[0];
 
+  if (!user) {
+    throw new Error("ERROR: something went wrong, user not created");
+  }
+
   return {
     user,
+    message: "user created",
+    ok: true,
   };
 }
